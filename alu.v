@@ -77,48 +77,58 @@ module alu #(parameter width = 8)(
                 if(mode_i)begin
                     case(cmd_i)
                     4'd0: begin
-                          if(inp_valid_i==2'd3)
+                          if(inp_valid_i==2'd3) begin
                               {cout_out,out[width-1:0]} = opa_i + opb_i;
                               out = opa_i + opb_i;
                               oflow_out = 0;
+			  end
+			  else err_out = 1;
                           end
                     4'd1: begin
                           if(inp_valid_i==2'd3) begin
                               out = opa_i - opb_i;
                               oflow_out = (opa_i<opb_i)? 1:0;
                           end
+			  else err_out = 1;
                           end
                     4'd2: begin
-                          if(inp_valid_i==2'd3) 
+                          if(inp_valid_i==2'd3) begin
                               {cout_out,out[width-1:0]} = opa_i + opb_i + cin_i;
                               out = opa_i + opb_i + cin_i;
                               oflow_out = 0;
+			  end
+			  else err_out = 1;
                           end
                     4'd3: begin
                           if(inp_valid_i==2'd3) begin
                               out = opa_i - opb_i - cin_i;
                               oflow_out = (opa_i<(opb_i+cin_i))? 1:0;
                           end
+			  else err_out = 1;
                           end
                     4'd4: begin
                           if(inp_valid_i==2'd1) begin
                               out[width-1:0] = opa_i + 1;
                           end
+			  else err_out = 1;
                           end
                     4'd5: begin
                           if(inp_valid_i==2'd1) begin
                               out[width-1:0] = opa_i - 1;
                           end
+			  else err_out = 1;
                           end
                     4'd6: begin
                           if(inp_valid_i==2'd2) begin
                               out[width-1:0] = opb_i + 1;
                           end
+			  else err_out = 1;
                           end
                     4'd7: begin
                           if(inp_valid_i==2'd2) begin
                               out[width-1:0] = opb_i - 1;
                           end
+			  else err_out = 1;
                           end
                     4'd8: begin
                           if(inp_valid_i==2'd3) begin
@@ -126,28 +136,33 @@ module alu #(parameter width = 8)(
                                lout = (opa_i < opb_i);
                                eout = (opa_i == opb_i);
                           end
+			  else err_out = 1;
                           end
                     4'd9: begin
                           if(inp_valid_i==2'd3) begin
                               out = (opa_i+1) * (opb_i+1);
                           end
+			  else err_out = 1;
                           end
                     4'd10: begin
                            if(inp_valid_i==2'd3) begin
                                out = (opa_i<<1) * opb_i;
                            end
+			   else err_out = 1;
                            end
                     4'd11: begin
                           if(inp_valid_i==2'd3) begin
                               out = $signed(opa_i) + $signed(opb_i);
                               oflow_out = (opa_i[width-1] == opb_i[width-1]) && (out[width-1] != opa_i[width-1]);
                           end
+			  else err_out = 1;
                           end
                    4'd12: begin
                           if(inp_valid_i==2'd3) begin
                               out = $signed(opa_i) - $signed(opb_i);
                               oflow_out = (opa_i[width-1] != opb_i[width-1]) && (out[width-1] != opa_i[width-1]);
                           end
+			  else err_out = 1;
                           end
                   default: err_out = 1;
                   endcase
@@ -165,7 +180,8 @@ module alu #(parameter width = 8)(
                   4'd9: if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = opa_i << 1;
                   4'd10: if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i >> 1;
                   4'd11: if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i << 1;
-                  4'd12: if(inp_valid_i==2'd3) begin
+                  4'd12: begin 
+			  if(inp_valid_i==2'd3) begin
                               if (|opb_i[7:4]) begin
                                   err_out = 1;
                               end else begin
@@ -175,7 +191,11 @@ module alu #(parameter width = 8)(
                                       out[width-1:0] = (opa_i >> sh) | (opa_i << (width - sh));
                                   end 
                          end
-                   4'd13: if(inp_valid_i==2'd3)begin
+			 
+			  else err_out = 1;
+			end
+                   4'd13: begin 
+			  if(inp_valid_i==2'd3)begin
                               if (|opb_i[7:4]) begin
                                  err_out = 1;
                               end else begin
@@ -184,7 +204,10 @@ module alu #(parameter width = 8)(
                                  else
                                      out[width-1:0] = (opa_i << sh) | (opa_i >> (width - sh));
                                  end
-                          end         
+                            
+			  end 
+			  else err_out = 1; 
+			  end      
                   default: err_out = 1;
                   endcase
               end
