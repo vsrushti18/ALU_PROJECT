@@ -168,20 +168,66 @@ module alu #(parameter width = 8)(
                   endcase
               end else begin
                   case(cmd_i) 
-                  4'd0: if(inp_valid_i==2'd3) out[width-1:0] = opa_i & opb_i;
-                  4'd1: if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i & opb_i);
-                  4'd2: if(inp_valid_i==2'd3) out[width-1:0] = opa_i | opb_i;
-                  4'd3: if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i | opb_i);
-                  4'd4: if(inp_valid_i==2'd3) out[width-1:0] = opa_i ^ opb_i;
-                  4'd5: if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i ^ opb_i);
-                  4'd6: if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = ~opa_i;
-                  4'd7: if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = ~opb_i;
-                  4'd8: if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = opa_i >> 1;
-                  4'd9: if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = opa_i << 1;
-                  4'd10: if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i >> 1;
-                  4'd11: if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i << 1;
+                  4'd0: begin 
+					    if(inp_valid_i==2'd3) out[width-1:0] = opa_i & opb_i;
+					  	else err_out = 1;
+				  end
+                  4'd1:begin 
+					    if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i & opb_i);
+					  	else err_out = 1;
+				  end  
+                  4'd2: begin 
+					    if(inp_valid_i==2'd3) out[width-1:0] = opa_i | opb_i;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd3: begin 
+					    if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i | opb_i);
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd4:begin 
+					     if(inp_valid_i==2'd3) out[width-1:0] = opa_i ^ opb_i;
+					  	else err_out = 1;
+				  end  
+					 
+                  4'd5: begin 
+					    if(inp_valid_i==2'd3) out[width-1:0] = ~(opa_i ^ opb_i);
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd6: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = ~opa_i;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd7: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = ~opb_i;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd8: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = opa_i >> 1;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd9: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd1) out[width-1:0] = opa_i << 1;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd10: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i >> 1;
+					  	else err_out = 1;
+				  end 
+					  
+                  4'd11: begin 
+					    if(inp_valid_i==2'd3 || inp_valid_i==2'd2) out[width-1:0] = opb_i << 1;
+					  	else err_out = 1;
+				  end 
+					  
                   4'd12: begin 
-			  if(inp_valid_i==2'd3) begin
+			             if(inp_valid_i==2'd3) begin
                               if (|opb_i[7:4]) begin
                                   err_out = 1;
                               end else begin
@@ -192,10 +238,10 @@ module alu #(parameter width = 8)(
                                   end 
                          end
 			 
-			  else err_out = 1;
-			end
+			             else err_out = 1;
+			             end
                    4'd13: begin 
-			  if(inp_valid_i==2'd3)begin
+			              if(inp_valid_i==2'd3)begin
                               if (|opb_i[7:4]) begin
                                  err_out = 1;
                               end else begin
@@ -205,9 +251,9 @@ module alu #(parameter width = 8)(
                                      out[width-1:0] = (opa_i << sh) | (opa_i >> (width - sh));
                                  end
                             
-			  end 
-			  else err_out = 1; 
-			  end      
+			             end 
+			             else err_out = 1; 
+			              end      
                   default: err_out = 1;
                   endcase
               end
