@@ -1,0 +1,567 @@
+# vsim -c testbench_main 
+# Start time: 07:45:04 on May 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench_main(fast)
+# [FAIL]                                                            MUL_FIRST_AFTER_RESET: OPA=0x05 OPB=0x03 INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# 
+# === Testing Arithmetic Operations (MODE=1) ===
+# [FAIL]                                                                     ADD_AB_VALID: OPA=0x0c OPB=0x05 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0011 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          ADD_M_M: OPA=0xff OPB=0xff CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x01fe COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          ADD_M_1: OPA=0xff OPB=0x01 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0100 COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                ADD_INP_INVALID_B: OPA=0xff OPB=0x01 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                ADD_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              ADD_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                  ADD_COUT_TOGGLE: OPA=0xff OPB=0x01 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0100 COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SUB_AB_VALID: OPA=0x0c OPB=0x05 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0007 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                         SUB_SAME: OPA=0xff OPB=0xff CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         SUM_0_NZ: OPA=0x00 OPB=0x0f CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xfff1 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    SUM_UNDERFLOW: OPA=0x00 OPB=0x01 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xffff COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                SUM_INP_INVALID_B: OPA=0xff OPB=0x01 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                SUM_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              SUM_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                 ADD_ABCIN0_VALID: OPA=0x0c OPB=0x05 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0011 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     ADDCIN_MAX_0: OPA=0xff OPB=0xff CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x01fe COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                 ADD_ABCIN1_VALID: OPA=0x0c OPB=0x05 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0012 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     ADDCIN_MAX_1: OPA=0xff OPB=0xff CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x01ff COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                       ADD_WRAP_1: OPA=0xff OPB=0x00 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0100 COUT=1 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             ADDCIN_INP_INVALID_B: OPA=0xff OPB=0xff CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             ADDCIN_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           ADDCIN_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                 SUB_ABCIN0_VALID: OPA=0x0c OPB=0x05 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0007 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                SUBCIN_EQUAL_CIN0: OPA=0x37 OPB=0x37 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                 SUB_ABCIN1_VALID: OPA=0x0c OPB=0x05 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0006 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                       SUBCIN_001: OPA=0x00 OPB=0x00 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xffff COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    SUBCIN_SAME_1: OPA=0x37 OPB=0x37 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xffff COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    SUBCIN_0_NZ_1: OPA=0x00 OPB=0x0c CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xfff3 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             SUBCIN_INP_INVALID_B: OPA=0xff OPB=0xff CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             SUBCIN_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           SUBCIN_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    INC_A_VALID_3: OPA=0x0c OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000d COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    INC_A_VALID_1: OPA=0x0c OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000d COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                      INC_A_MAX_3: OPA=0xff OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                      INC_A_MAX_1: OPA=0xff OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              INC_A_INP_INVALID_A: OPA=0xff OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            INC_A_INP_INVALID_A_B: OPA=0xff OPB=0x00 CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    DEC_A_VALID_3: OPA=0x0c OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    DEC_A_VALID_1: OPA=0x0c OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                      DEC_A_MIN_3: OPA=0x00 OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                      DEC_A_MIN_1: OPA=0x00 OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              DEC_A_INP_INVALID_A: OPA=0xff OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            DEC_A_INP_INVALID_A_B: OPA=0xff OPB=0x00 CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    INC_B_VALID_3: OPA=0x00 OPB=0xcc CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00cd COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    INC_B_VALID_2: OPA=0x00 OPB=0xcc CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00cd COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                      INC_B_MAX_3: OPA=0x00 OPB=0xff CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                      INC_B_MAX_2: OPA=0x00 OPB=0xff CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              INC_B_INP_INVALID_B: OPA=0xff OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            INC_B_INP_INVALID_A_B: OPA=0xff OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    DEC_B_VALID_3: OPA=0x00 OPB=0x0c CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    DEC_B_VALID_2: OPA=0x00 OPB=0x0c CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                      DEC_B_MIN_3: OPA=0x00 OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                      DEC_B_MIN_2: OPA=0x00 OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              DEC_B_INP_INVALID_B: OPA=0xff OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            DEC_B_INP_INVALID_A_B: OPA=0xff OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                      CMP_GREATER: OPA=0x0c OPB=0x05 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=1 E=0 L=0 ERR=0
+# [FAIL]                                                                         CMP_LESS: OPA=0x05 OPB=0x0c CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=1 ERR=0
+# [FAIL]                                                                        CMP_EQUAL: OPA=0xff OPB=0xff CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=1 L=0 ERR=0
+# [FAIL]                                                                CMP_INP_INVALID_B: OPA=0xff OPB=0x01 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                CMP_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              CMP_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                          MUL ADD: OPA=0x17 OPB=0x0c INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0018 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          MUL ADD: OPA=0x32 OPB=0xe1 INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0018 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                          MUL ADD: OPA=0xff OPB=0xff INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x2d06 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        MUL SHIFT: OPA=0x17 OPB=0x0c INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        MUL SHIFT: OPA=0x01 OPB=0x03 INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0228 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        MUL SHIFT: OPA=0x80 OPB=0x01 INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0006 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        MUL09_INV: OPA=0x17 OPB=0x0c INP_VALID=0x0 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        MUL10_INV: OPA=0x17 OPB=0x0c INP_VALID=0x0 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                  MUL_TEMPA_UPPER: OPA=0xbf OPB=0x0f INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   MUL_TEMPB_BIT4: OPA=0x05 OPB=0x0f INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0x9
+# DUT: RES=0x0c00 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              MUL10_TEMPB_BIT4_HL: OPA=0x05 OPB=0x1f INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0060 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              MUL10_TEMPB_BIT4_LO: OPA=0x05 OPB=0x00 INP_VALID=0x3 MODE=0x1 CIN=0x0 CE=0x1 CMD=0xa
+# DUT: RES=0x0136 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xxxxx COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SADD_VALID_POS: OPA=0x14 OPB=0x0a CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x001e COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SADD_VALID_NEG: OPA=0xf6 OPB=0xfb CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xfff1 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SADD_POS_NEG: OPA=0x14 OPB=0xfb CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000f COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SADD_POS_OFLOW: OPA=0x7f OPB=0x01 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0080 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SADD_NEG_OFLOW: OPA=0x80 OPB=0xff CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xff7f COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                               SADD_INP_INVALID_B: OPA=0xff OPB=0x01 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                               SADD_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             SADD_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                   SSUB_VALID_POS: OPA=0x14 OPB=0x0a CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x000a COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SSUB_VALID_NEG: OPA=0xec OPB=0xf6 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xfff6 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SSUB_POS_NEG: OPA=0x14 OPB=0xfb CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0019 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SSUB_NEG_POS: OPA=0xec OPB=0x05 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xffe7 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SSUB_POS_OFLOW: OPA=0x7f OPB=0xff CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0080 COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SSUB_NEG_OFLOW: OPA=0x80 OPB=0x01 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0xff7f COUT=0 OFLOW=1 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                               SSUB_INP_INVALID_B: OPA=0xff OPB=0x01 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                               SSUB_INP_INVALID_A: OPA=0xff OPB=0x01 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             SSUB_INP_INVALID_A_B: OPA=0xff OPB=0x01 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                       ARITHMETIC_DEFAULT_INVALID: OPA=0xaa OPB=0xbb CMD=0xf
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# 
+# === Testing Logical Operations (MODE=0) ===
+# [FAIL]                                                                        AND_VALID: OPA=0xcc OPB=0xaa CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0088 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                         AND_ZERO: OPA=0xaa OPB=0x00 CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                AND_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                AND_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              AND_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x0
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                       NAND_VALID: OPA=0xcc OPB=0xaa CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0077 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                    NAND_ALL_ONES: OPA=0xff OPB=0xff CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        NAND_ZERO: OPA=0xf0 OPB=0x00 CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                               NAND_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                               NAND_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             NAND_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x1
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                         OR_VALID: OPA=0xcc OPB=0xaa CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ee COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                          OR_ZERO: OPA=0x00 OPB=0x00 CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                 OR_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                 OR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                               OR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x2
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                        NOR_VALID: OPA=0xcc OPB=0xaa CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0011 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         NOR_ZERO: OPA=0x00 OPB=0x00 CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                NOR_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                NOR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              NOR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x3
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                        XOR_VALID: OPA=0xcc OPB=0xaa CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0066 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                         XOR_SAME: OPA=0xff OPB=0xff CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                XOR_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                XOR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              XOR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x4
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                       XNOR_VALID: OPA=0xcc OPB=0xaa CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0099 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                        XNOR_SAME: OPA=0xff OPB=0xff CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                               XNOR_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                               XNOR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                             XNOR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0x5
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    NOT_A_VALID_3: OPA=0xcc OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0033 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    NOT_A_VALID_1: OPA=0xcc OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0033 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     NOT_A_ZERO_3: OPA=0x00 OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     NOT_A_ZERO_1: OPA=0x00 OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              NOT_A_INP_INVALID_B: OPA=0xaa OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            NOT_A_INP_INVALID_A_B: OPA=0xaa OPB=0x00 CMD=0x6
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                    NOT_B_VALID_3: OPA=0x00 OPB=0xcc CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0033 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                    NOT_B_VALID_2: OPA=0x00 OPB=0xcc CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0033 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     NOT_B_ZERO_3: OPA=0x00 OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     NOT_B_ZERO_2: OPA=0x00 OPB=0x00 CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00ff COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                              NOT_B_INP_INVALID_B: OPA=0x00 OPB=0xaa CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                            NOT_B_INP_INVALID_A_B: OPA=0x00 OPB=0xaa CMD=0x7
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                   SHR1_A_VALID_3: OPA=0x11 OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0008 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SHR1_A_VALID_1: OPA=0x11 OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0008 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SHR1_A_LSB_3: OPA=0x80 OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0040 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SHR1_A_LSB_1: OPA=0x80 OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0040 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             SHR1_A_INP_INVALID_A: OPA=0xaa OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           SHR1_A_INP_INVALID_A_B: OPA=0xaa OPB=0x00 CMD=0x8
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                   SHL1_A_VALID_3: OPA=0x11 OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0022 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SHL1_A_VALID_1: OPA=0x11 OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0022 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                     SHL1_A_MSB_3: OPA=0x80 OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                     SHL1_A_MSB_1: OPA=0x80 OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             SHL1_A_INP_INVALID_A: OPA=0xaa OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           SHL1_A_INP_INVALID_A_B: OPA=0xaa OPB=0x00 CMD=0x9
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                   SHR1_B_VALID_3: OPA=0x00 OPB=0x11 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0008 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SHR1_B_VALID_2: OPA=0x00 OPB=0x11 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0008 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SHR1_B_LSB_3: OPA=0x00 OPB=0x80 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0040 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     SHR1_B_LSB_2: OPA=0x00 OPB=0x80 CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0040 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             SHR1_B_INP_INVALID_B: OPA=0x00 OPB=0xaa CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           SHR1_B_INP_INVALID_A_B: OPA=0x00 OPB=0xaa CMD=0xa
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                   SHL1_B_VALID_3: OPA=0x00 OPB=0x11 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0022 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                   SHL1_B_VALID_2: OPA=0x00 OPB=0x11 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0022 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                     SHL1_B_MSB_3: OPA=0x00 OPB=0x80 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [PASS]                                                                     SHL1_B_MSB_2: OPA=0x00 OPB=0x80 CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                             SHL1_B_INP_INVALID_B: OPA=0x00 OPB=0xaa CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                           SHL1_B_INP_INVALID_A_B: OPA=0x00 OPB=0xaa CMD=0xb
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                     ROL_NO_SHIFT: OPA=0xb1 OPB=0x00 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00b1 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         ROL_BY_1: OPA=0xb1 OPB=0x01 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00d8 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         ROL_BY_7: OPA=0xb1 OPB=0x07 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0063 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     ROL_UPPERBIT: OPA=0xb1 OPB=0x84 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x001b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                            ROL_4: OPA=0x0c OPB=0x02 CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0003 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                ROL_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                ROR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              ROR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0xc
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                     ROR_NO_SHIFT: OPA=0xb1 OPB=0x00 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00b1 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         ROR_BY_1: OPA=0xb1 OPB=0x01 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0063 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                         ROR_BY_7: OPA=0xb1 OPB=0x07 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x00d8 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                                     ROR_UPPERBIT: OPA=0xb1 OPB=0x84 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x001b COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                ROR_INP_INVALID_B: OPA=0xcc OPB=0xaa CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                ROR_INP_INVALID_A: OPA=0xcc OPB=0xaa CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                              ROR_INP_INVALID_A_B: OPA=0xcc OPB=0xaa CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                     ROR_NO_SHIFT: OPA=0xb1 OPB=0x00 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# [FAIL]                                                                          ROR_CE1: OPA=0xb1 OPB=0x01 CMD=0xd
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0063 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+# [FAIL]                                                          LOGICAL_DEFAULT_INVALID: OPA=0xaa OPB=0xbb CMD=0xf
+# DUT: RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=0
+#   REF:     RES=0x0000 COUT=0 OFLOW=0 G=0 E=0 L=0 ERR=1
+# 
+# === Testing RST Mid Operation ===
+# 
+# === TEST SUMMARY ===
+# Total Tests: 177
+# PASS: 14
+# FAIL: 163
+# 
+# *** SOME TESTS FAILED ***
+# 
+# ** Note: $finish    : testbench_main.v(126)
+#    Time: 5610 ns  Iteration: 0  Instance: /testbench_main
+# End time: 07:45:08 on May 11,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0

@@ -1,0 +1,68 @@
+var g_data = {
+f3:{
+scopes:[{link:'z.htm?f=0&s=3',val:'work.test_design'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg246',items:[{c:'Y',p:'87.50',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'15',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'11',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'11',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'11',c:'g'}
+,{cr:'m',z:'st1 -> st0',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'st2',h:'11',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'11',c:'g'}
+]}
+
+],
+},
+f201:{
+scopes:[{s:'5',b:'1',val:'testbench_main'},{link:'z.htm?f=0&s=201',val:'dut'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg246',items:[{c:'Y',p:'87.50',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'15',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'11',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'11',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'11',c:'g'}
+,{cr:'m',z:'st1 -> st0',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'st2',h:'11',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'11',c:'g'}
+]}
+
+],
+},
+f4:{
+scopes:[{link:'z.htm?f=0&s=4',val:'work.ref_main'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg350',items:[{c:'G',p:'91.66',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'4',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'1',c:'g'}
+,{cr:'c',z:'st0 -> st2',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'27',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'27',c:'g'}
+,{cr:'m',z:'st1 -> st0',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'st2',h:'403',c:'g'}
+,{cr:'c',z:'st2 -> st1',h:'26',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'1',c:'g'}
+]}
+
+],
+},
+f293:{
+scopes:[{s:'5',b:'1',val:'testbench_main'},{link:'z.htm?f=0&s=293',val:'ref_model'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg350',items:[{c:'G',p:'91.66',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'4',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'1',c:'g'}
+,{cr:'c',z:'st0 -> st2',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'27',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'27',c:'g'}
+,{cr:'m',z:'st1 -> st0',h:'0',c:'r'}
+,{cr:'c',s:'1',z:'st2',h:'403',c:'g'}
+,{cr:'c',z:'st2 -> st1',h:'26',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'1',c:'g'}
+]}
+
+],
+},
+dummyEnd:0
+};
+processFsmData(g_data);

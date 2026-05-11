@@ -1,0 +1,34 @@
+$date
+	Mon May 11 07:45:08 2026
+$end
+$version
+	QuestaSim Version 10.6c
+$end
+$timescale
+	1ps
+$end
+
+$scope module testbench_main $end
+
+$scope task test_arithmetic $end
+$upscope $end
+
+$scope task test_logical $end
+$upscope $end
+
+$scope task apply_test $end
+$upscope $end
+
+$scope task apply_test_mul $end
+$upscope $end
+
+$scope function compare_outputs $end
+$upscope $end
+
+$scope task display_mismatch $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+$end
