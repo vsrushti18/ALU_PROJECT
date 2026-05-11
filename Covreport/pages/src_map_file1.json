@@ -1,4 +1,0 @@
-var g_data = {'dummy':null,
-'3':'ref_main.v',
-'2':'test_design.v',
-'1':'testbench_main.v'};
